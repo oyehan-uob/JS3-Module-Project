@@ -17,6 +17,11 @@ body{
   margin: 0.6vw 1.4vw;
   box-shadow: 0.5vw 0.5vw 0.3vw goldenrod;
 }
+#card:hover{
+  background-color: rgb(3, 10, 39);
+  transform: scale(0.9);
+  box-shadow: 0.2vw 0.2vw 0.2vw 0.2vw rgb(214, 204, 177);
+}
 h3{
   border: solid 0.2vw rgb(255, 254, 254);
   border-radius: 0.8vw;
