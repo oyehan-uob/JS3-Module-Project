@@ -1,4 +1,5 @@
 function cardForEpisode(episode){
+  const rootElem = document.getElementById("root");
   const episodeCard = document.getElementById("episode").content.cloneNode(true);
   
   const title = episodeCard.querySelector("h3");
@@ -10,51 +11,26 @@ function cardForEpisode(episode){
   const text = episodeCard.querySelector("p");
   text.innerHTML = episode.summary;
 
+  rootElem.appendChild(episodeCard);
+
   return episodeCard;
 }
 
-const oneEpisode = cardForEpisode(getOneEpisode());
-// document.body.appendChild(oneEpisode);
-
 const allEpisodes = getAllEpisodes().map(cardForEpisode);
-document.body.append(...allEpisodes);
-
-
-
-// console.log(cardForEpisode(getOneEpisode()));
-// document.body.appendChild(cardForEpisode(getOneEpisode()));
-
-// const allCards = getAllEpisodes().map(cardForEpisode);
-// console.log(allCards);
-// document.body.append(allCards);
-
-// for (const episode in getAllEpisodes()){
-//   console.log(cardForEpisode(episode));
-//   // console.log(episode);
-// }
-
-// cardForEpisode();
-
-// const title = document.querySelector("h2");
-// title.textContent = getOneEpisode().name;
-
-// const img = document.querySelector("img");
-// img.src = getOneEpisode().image.medium;
-// const txt = document.querySelector("p");
-// txt.innerHTML = getOneEpisode().summary;
+const allCards = document.body.append(...allEpisodes);
 
 
 
 
 //You can edit ALL of the code here
-function setup() {
-  const allEpisodes = getAllEpisodes();
-  makePageForEpisodes(allEpisodes);
-}
+// function setup() {
+//   const allEpisodes = getAllEpisodes();
+//   makePageForEpisodes(allEpisodes);
+// }
 
-function makePageForEpisodes(episodeList) {
-  const rootElem = document.getElementById("root");
-  rootElem.textContent = `Got ${episodeList.length} episode(s)`;
-}
+// function makePageForEpisodes(episodeList) {
+//   const rootElem = document.getElementById("root");
+//   rootElem.textContent = `Got ${episodeList.length} episode(s)`;
+// }
 
 window.onload = setup;
