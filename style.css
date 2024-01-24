@@ -1,3 +1,35 @@
 #root {
-  color: red;
+  color: rgb(252, 250, 250);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5vw;
+  margin: 0.1vw 4vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+  background-color: rgb(223, 199, 199);
+}
+#card{
+  background-color:#043a55;
+  border-radius: 0.8vw;
+  text-align: center;
+  margin: 0.6vw 1.4vw;
+  box-shadow: 0.5vw 0.5vw 0.3vw goldenrod;
+}
+#card:hover{
+  background-color: rgb(3, 10, 39);
+  transform: scale(0.9);
+  box-shadow: 0.2vw 0.2vw 0.2vw 0.2vw rgb(214, 204, 177);
+}
+h3{
+  border: solid 0.2vw rgb(255, 254, 254);
+  border-radius: 0.8vw;
+  padding: 1.5vw;
+  text-align: center;
+  margin-top: auto;
+}
+p,img{
+  margin: 0.8vw 1.8vw;
+  text-align: justify;
 }
