@@ -26,7 +26,7 @@ function cardForEpisode(episode) {
 }
 
 const allEpisodes = getAllEpisodes().map(cardForEpisode);
-const allCards = document.body.append(...allEpisodes);
+
 
 
 function removeCards() {
