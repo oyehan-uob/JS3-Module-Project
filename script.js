@@ -1,9 +1,18 @@
-function cardForEpisode(episode){
+const input = document.querySelector("#input-search");
+let search = "";
+
+
+function cardForEpisode(episode) {
   const rootElem = document.getElementById("root");
-  const episodeCard = document.getElementById("episode").content.cloneNode(true);
-  
+  const episodeCard = document
+    .getElementById("episode")
+    .content.cloneNode(true);
+
   const title = episodeCard.querySelector("h3");
-  title.innerHTML = `${episode.name} - S${String(episode.season).padStart(2,0)}E${String(episode.number).padStart(2,0)}`;
+  title.innerHTML = `${episode.name} - S${String(episode.season).padStart(
+    2,
+    0
+  )}E${String(episode.number).padStart(2, 0)}`;
 
   const img = episodeCard.querySelector("img");
   img.src = episode.image.medium;
@@ -33,4 +42,4 @@ const allCards = document.body.append(...allEpisodes);
 //   rootElem.textContent = `Got ${episodeList.length} episode(s)`;
 // }
 
-window.onload = setup;
+// window.onload = setup;
