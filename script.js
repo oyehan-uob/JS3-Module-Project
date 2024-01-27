@@ -1,6 +1,24 @@
 const input = document.querySelector("#input-search");
 let search = "";
 
+const dropDownMenu = document.getElementById("dropDown");
+dropDownMenu.textContent = "text";
+function dropDownFilter (){
+  const noOption = document.createElement("option");
+  noOption.textContent = "None...";
+  dropDownMenu.appendChild(noOption);
+  getAllEpisodes().forEach((episode) => {
+    console.log(episode.name);
+    const option = document.createElement("option");
+    option.textContent = episode.name;
+    dropDownMenu.appendChild(option);
+  })
+}
+dropDownFilter();
+// dropDownMenu.addEventListener("click", function(e){
+
+// })
+
 function cardForEpisode(episode) {
   const rootElem = document.getElementById("root");
   const episodeCard = document
@@ -25,8 +43,6 @@ function cardForEpisode(episode) {
 }
 
 const allEpisodes = getAllEpisodes().map(cardForEpisode);
-
-
 
 function removeCards() {
   const cards = document.querySelectorAll("#card");
@@ -58,8 +74,6 @@ function episodeSearch() {
 }
 
 input.addEventListener("input", episodeSearch);
-
-
 
 //You can edit ALL of the code here
 // function setup() {
