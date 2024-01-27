@@ -29,6 +29,15 @@ const allEpisodes = getAllEpisodes().map(cardForEpisode);
 const allCards = document.body.append(...allEpisodes);
 
 
+function removeCards() {
+  const cards = document.querySelectorAll("#card");
+  cards.forEach((card) => {
+    card.remove();
+  });
+  console.log(cards.length);
+}
+
+
 
 
 //You can edit ALL of the code here
