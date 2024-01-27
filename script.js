@@ -56,6 +56,7 @@ function episodeSearch() {
   renderEpisodes(filteredEpisodes);
 }
 
+input.addEventListener("input", episodeSearch);
 
 
 
