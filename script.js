@@ -1,7 +1,6 @@
 const input = document.querySelector("#input-search");
 let search = "";
 
-
 function cardForEpisode(episode) {
   const rootElem = document.getElementById("root");
   const episodeCard = document
@@ -54,6 +53,11 @@ function episodeSearch() {
     : getAllEpisodes();
   removeCards();
   renderEpisodes(filteredEpisodes);
+  // const episodeCount = document.createElement("p");
+  // episodeCount.id = "episode-count";
+  const count = document.getElementById("count");
+  // episodeCount.textContent = `Displaying ${episodeSearch.length}/73 episodes`;
+  count.textContent = `Displaying ${filteredEpisodes.length}/73 episodes`;
 }
 
 input.addEventListener("input", episodeSearch);

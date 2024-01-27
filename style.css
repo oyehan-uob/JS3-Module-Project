@@ -10,6 +10,19 @@
 body{
   background-color: rgb(223, 199, 199);
 }
+
+.input-search{
+  margin: 0.6vw 5.5vw;
+}
+
+#input-search{
+  height: 3vw;
+  width: 20vw;
+  border-radius: .4vw;
+}
+.episodeCount{
+  display: inline;
+}
 #card{
   background-color:#043a55;
   border-radius: 0.8vw;
