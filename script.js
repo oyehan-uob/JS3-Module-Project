@@ -36,6 +36,25 @@ function removeCards() {
   });
   console.log(cards.length);
 }
+function renderEpisodes(episodes) {
+  const rootElem = document.getElementById("root");
+  episodes.forEach((episode) => {
+    const episodeCard = cardForEpisode(episode);
+    rootElem.appendChild(episodeCard);
+  });
+}
+
+function episodeSearch() {
+  search = input.value.toLowerCase();
+
+  const filteredEpisodes = search
+    ? getAllEpisodes().filter((episode) =>
+        episode.name.toLowerCase().includes(search)
+      )
+    : getAllEpisodes();
+  removeCards();
+  renderEpisodes(filteredEpisodes);
+}
 
 
 
