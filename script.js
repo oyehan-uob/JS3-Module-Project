@@ -53,10 +53,7 @@ function episodeSearch() {
     : getAllEpisodes();
   removeCards();
   renderEpisodes(filteredEpisodes);
-  // const episodeCount = document.createElement("p");
-  // episodeCount.id = "episode-count";
   const count = document.getElementById("count");
-  // episodeCount.textContent = `Displaying ${episodeSearch.length}/73 episodes`;
   count.textContent = `Displaying ${filteredEpisodes.length}/73 episodes`;
 }
 
