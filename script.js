@@ -8,12 +8,14 @@ function dropDownFilter() {
   const noOption = document.createElement("option");
   noOption.textContent = "None...";
   dropDownMenu.appendChild(noOption);
+  noOption.classList.add("drop-down");
 
   getAllEpisodes().forEach((episode) => {
     //this iterates through the episodes and creates an option for each episode name
     const option = document.createElement("option");
     option.textContent = episode.name;
     dropDownMenu.appendChild(option);
+    option.classList.add("drop-down");
   });
 }
 
