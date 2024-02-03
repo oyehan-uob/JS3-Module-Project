@@ -9,6 +9,14 @@
   </head>
 
   <body>
+    <label for="drop-down">
+    <select id="dropDown"></select>
+    </label>
+    <label for="search" class="input-search">
+      <input type="search" id="input-search" name="search" placeholder="your search term...">🔍
+    </label>
+    <div id="count" class="episodeCount">
+    </div>
     <div id="root">
       <template id="episode">
         <section id="card">
@@ -17,12 +25,14 @@
           <p></p>
         </section>
       </template>
-    </div>
-    <a href="https://tvmaze.com/">Data used in above episode information comes from TVMaze.com</a>
-
+    </div>    
     <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
     <script src="episodes.js"></script>
     <!-- Loads YOUR javascript code -->
     <script src="script.js"></script>
+    <footer>
+      <a href="https://tvmaze.com/">Data used in above episode information comes from TVMaze.com</a>
+    </footer>
+
   </body>
 </html>
